@@ -4,30 +4,30 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Parser {
-    public int[] tenToBinary(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("input a number: (1-1000) ");
-        int input = 0;
-        try {
-            input = scanner.nextInt();
-            if ((0 >= input && input <= 1000)) {
-                tenToBinary();
-            }
-        } catch (Exception e){
-            System.out.println("stupid shit! ");
-            tenToBinary();
-        }
-
-        int binary = Integer.parseInt(Integer.toString(input, 2));
-        int[] arrayBinary = addToArr(binary);
-
-
-        System.out.println("input : " + input );
-        System.out.println("binary : " + binary);
-
-        return arrayBinary;
-
-    }
+//    public int[] tenToBinary(){
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("input a number: (1-1000) ");
+//        int input = 0;
+//        try {
+//            input = scanner.nextInt();
+//            if ((0 >= input && input <= 1000)) {
+//                tenToBinary();
+//            }
+//        } catch (Exception e){
+//            System.out.println("stupid shit! ");
+//            tenToBinary();
+//        }
+//
+//        int binary = Integer.parseInt(Integer.toString(input, 2));
+//        int[] arrayBinary = addToArr(binary);
+//
+//
+//        System.out.println("input : " + input );
+//        System.out.println("binary : " + binary);
+//
+//        return arrayBinary;
+//
+//    }
 
     // парсит строку и возвращает массив 11 битный
     public int[] getElevenBits(){

@@ -8,24 +8,18 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Parser parser = new Parser();
-        Scanner scanner = new Scanner(System.in);
 
         int[] code = parser.getElevenBits();
         Parser.printArr(code, "Your input code: ");
-        int[] newCode = Hamming.cipher(code);
-        Parser.printArr(newCode, "ciphered code: ");
+        int[] cipheredCode = Hamming.cipher(code);
+        Parser.printArr(cipheredCode, "ciphered code: ");
 
-        System.out.println("write which to change (1-15) : ");
-        int element = scanner.nextInt();
-        if (newCode[element-1] == 0){
-            newCode[element-1] = 1;
-        } else {
-            newCode[element-1] = 0;
-        }
+        Parser.printArr(Hamming.decipher(cipheredCode), "deciphered code:");
 
-        Parser.printArr(newCode, "code with error:");
+        cipheredCode = makeAnError(cipheredCode);
+        Parser.printArr(cipheredCode, "code with error:");
 
-        int[] recoveredCode = Hamming.removeErrors(newCode);
+        int[] recoveredCode = Hamming.recoverCode(cipheredCode);
         Parser.printArr(recoveredCode, "recovered code: ");
 
         int[] decipheredCode = Hamming.decipher(recoveredCode);
@@ -33,6 +27,18 @@ public class Main {
 
 
 
+    }
+
+    static int[] makeAnError(int[] cipheredCode){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("write which to change (1-15) : ");
+        int element = scanner.nextInt();
+        if (cipheredCode[element-1] == 0){
+            cipheredCode[element-1] = 1;
+        } else {
+            cipheredCode[element-1] = 0;
+        }
+        return cipheredCode;
     }
 
 

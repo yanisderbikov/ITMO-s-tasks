@@ -44,10 +44,11 @@ public class Hamming {
         return array[element];
     }
 
-    public static int[] removeErrors(int[] code){
+    public static int[] recoverCode(int[] code){
+        // TODO: 08.10.2022 неверно работает, нужно поглядеть в чем проблема
         int j = 1;
         int[] array = new int[16];
-        array[0] = 10;
+        array[0] = 10;// просто для удобства
         for (int i = 0; i < code.length; i++) {
             array[j] = code[i];
             j++;
@@ -55,13 +56,22 @@ public class Hamming {
 
         int[] checkList = new int[16];
 
+//        высчитывание проверочных элементов
         for (int i = 1; i <= 15; i*=2) {
             checkList[i] = create(array,i);
         }
-
+//        если неравны, то высчитывается в каком элементе ошибка
+        int errElement = 0;
         for (int i = 1; i <= 15; i*=2) {
-            if (checkList[i] != array[1] && checkList[i] == 0){
-                array[i] = 1;
+            if (checkList[i] != array[i]) {
+                errElement += i;
+            }
+        }
+        if (errElement != 0){
+            if(array[errElement] == 0) {
+                array[errElement] = 1;
+            } else {
+                array[errElement] = 0;
             }
         }
 
