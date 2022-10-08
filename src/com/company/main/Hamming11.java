@@ -22,58 +22,6 @@ public class Hamming11 {
             j++;
         }
 
-////        первое число:
-//        array[1] = 0;
-//        for (int i = 1; i <= array.length-1; i++) {
-//            if (i % 2 == 0){
-//                i++;
-//            }
-//            array[1] += array[i];
-//        }
-//        array[1] = array[1] % 2;
-//
-//
-////        второе число
-//        array[2] = array[3];
-//        for (int i = 6; i <= array.length-1 ; i++) {
-//            for (int k = 0; k < 2; k++) {
-//                array[2] += array[i+k];
-//            }
-//            i+=4;
-//        }
-//        array[2] = array[2] % 2;
-//
-//        array[2] = 0;
-//        j = 2;
-//        while (j<=15){
-//
-//        }
-//
-//
-//
-////        третее число
-//        array[4] = 0;
-//        j = 4;
-//        while (j<=15){
-//            for (int k = 0; k < 4; k++) {
-//                array[4] += array[j+k];
-//            }
-//            j+=8;
-//        }
-//        array[4] = array[4] % 2;
-//
-//
-////        четвертое число
-//        array[8] = 0;
-//        j = 8;
-//        while (j<=15){
-//            for (int k = 0; k < 8; k++) {
-//                array[8] += array[j+k];
-//            }
-//            j+=16;
-//        }
-//        array[8] = array[8] % 2;
-
         int i = 1;
         while (i <= 15){
             array[i] = create(array,i);
