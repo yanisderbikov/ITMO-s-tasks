@@ -1,10 +1,16 @@
 package com.company.test;
 
+import com.company.main.parser.Parser;
+
 public class Main {
     public static void main(String[] args) {
-        int a = 10;
-        int b = 2;
-        b += a;
-        System.out.println(b);
+        Parser parser = new Parser();
+
+        int a  = 10101011;
+        parser.addToArr(a);
+
+
+
+
     }
 }
