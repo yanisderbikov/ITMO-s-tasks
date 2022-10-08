@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3202abd2-cd37-448b-857e-ee785625b522" name="Changes" comment="trash cleaned">
-      <change afterPath="$PROJECT_DIR$/src/com/company/main/parser/Parser.java" afterDir="false" />
+    <list default="true" id="3202abd2-cd37-448b-857e-ee785625b522" name="Changes" comment="created parser binary code to array">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/main/Hamming11.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/main/hamming/Hamming11.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/main/hamming/Hamming11.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/main/hamming/Hamming.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/main/parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/main/parser/Parser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/test/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +39,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.com.company.test.Main">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.main.Main" />
       <module name="Abstractions" />
@@ -62,8 +62,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.com.company.test.Main" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.com.company.test.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -76,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1664956953147</updated>
       <workItem from="1664956954384" duration="21780000" />
-      <workItem from="1665204042907" duration="4001000" />
+      <workItem from="1665204042907" duration="12724000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1665204347570</created>
@@ -92,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665204640516</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="created parser binary code to array">
+      <created>1665208306363</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665208306363</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +119,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test commit" />
     <MESSAGE value="trash cleaned" />
-    <option name="LAST_COMMIT_MESSAGE" value="trash cleaned" />
+    <MESSAGE value="created parser binary code to array" />
+    <option name="LAST_COMMIT_MESSAGE" value="created parser binary code to array" />
   </component>
 </project>

@@ -2,11 +2,11 @@ package com.company.main.hamming;
 
 import java.util.Arrays;
 
-public class Hamming11 {
+public class Hamming {
 
 
-    // cюда пеоедается 11 битный код
-    public static int[] shifr(int[] code){
+    // пеоедается 11 битный код
+    public static int[] cipher(int[] code){
 
         int[] array = new int[16];
         Arrays.fill(array, -1);
@@ -66,6 +66,28 @@ public class Hamming11 {
         }
 
         return Arrays.copyOfRange(array,1,array.length);
+    }
+
+    public static int[] decipher(int[] ciphered){
+        int[] copy = new int[16];
+        for (int i = 1; i <= 15; i++) {
+            copy[i] = ciphered[i-1];
+        }
+
+        int[] decipheredArr = new int[12];
+
+        int i = 3;
+        int j = 1;
+        while (i <= 15){
+            if (i == 4 || i == 8) {
+                i++;
+            }
+            decipheredArr[j] = copy[i];
+            i++;
+            j++;
+        }
+
+        return Arrays.copyOfRange(decipheredArr, 1, decipheredArr.length);
     }
 
 
