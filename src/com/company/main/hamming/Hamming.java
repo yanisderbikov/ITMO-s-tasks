@@ -4,8 +4,6 @@ import java.util.Arrays;
 
 public class Hamming {
 
-
-    // пеоедается 11 битный код
     public static int[] cipher(int[] code){
 
         int[] array = new int[16];
