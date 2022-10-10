@@ -30,12 +30,12 @@ public class Parser {
 //    }
 
     // парсит строку и возвращает массив 11 битный
-    public int[] getElevenBits(){
+    public int[] parseElevenBits(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("write down 11 bits");
         String inputStr = scanner.nextLine();
         if (inputStr.length() > 11){
-            getElevenBits();
+            parseElevenBits();
         }
         int[] arr = new int[11];
         try {
@@ -54,10 +54,10 @@ public class Parser {
 
         } catch (Exception e){
             System.out.println("this is some shit, not a binary");
-            getElevenBits();
+            parseElevenBits();
         }
         if (!Arrays.stream(arr).allMatch(x -> x == 0 || x == 1)){
-            getElevenBits();
+            parseElevenBits();
         }
 
         return arr;
@@ -82,6 +82,40 @@ public class Parser {
             System.out.print(arr[i]);
         }
         System.out.println();
+    }
+
+    public int[] parseFifteenBits(){
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("write down 15 bits");
+        String inputStr = scanner.nextLine();
+        if (inputStr.length() > 15){
+            parseFifteenBits();
+        }
+        int[] arr = new int[15];
+        try {
+            int[] arrCash = new int[inputStr.length()];
+            for (int i = 0; i < arrCash.length; i++) {
+                arrCash[i] = Integer.parseInt(inputStr.substring(i, i+1));
+            }
+
+            int i = 14;
+            int j = arrCash.length-1;
+            while (i > (14 - arrCash.length)){
+                arr[i] = arrCash[j];
+                i--;
+                j--;
+            }
+
+        } catch (Exception e){
+            System.out.println("this is some shit, not a binary");
+            parseFifteenBits();
+        }
+        if (!Arrays.stream(arr).allMatch(x -> x == 0 || x == 1)){
+            parseFifteenBits();
+        }
+
+        return arr;
     }
 
 }
