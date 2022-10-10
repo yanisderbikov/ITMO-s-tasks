@@ -1,8 +1,11 @@
 package com.company.main;
 
 import com.company.main.hamming.Hamming;
+import com.company.main.parser.NumSystem;
 import com.company.main.parser.Parser;
+import com.company.trash.numbersystem.ToTen;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -17,6 +20,8 @@ public class Main {
 
         int[] decipheredCode = Hamming.decipher(recoveredCode);
         Parser.printArr(decipheredCode, "deciphered code is: ");
+
+        System.out.printf("at 10 num system %s is: '%d'" , Parser.printArr(decipheredCode), NumSystem.byteToTenSystem(decipheredCode));
 
 //
 //        int[] code = parser.parseElevenBits();

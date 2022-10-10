@@ -1,5 +1,6 @@
 package com.company.test;
 
+import com.company.main.parser.NumSystem;
 import com.company.main.parser.Parser;
 import com.company.trash.numbersystem.ToTen;
 
@@ -11,8 +12,9 @@ public class Main {
 
         Parser parser = new Parser();
         int[] elevenBits = parser.parseElevenBits();
+        Parser.printArr(elevenBits, "your input: ");
 
-        int ten = ToTen.byteToTenSystem(elevenBits);
+        int ten = NumSystem.byteToTenSystem(elevenBits);
         System.out.println(ten);
 
 

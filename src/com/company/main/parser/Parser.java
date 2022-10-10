@@ -84,6 +84,17 @@ public class Parser {
         System.out.println();
     }
 
+    public static String printArr(int[] arr){
+        StringBuilder builder = new StringBuilder("");
+        builder.append("[");
+        for (int i = 0; i < arr.length; i++) {
+            builder.append(arr[i]);
+        }
+        builder.append("]");
+
+        return builder.toString();
+    }
+
     public int[] parseFifteenBits(){
 
         Scanner scanner = new Scanner(System.in);

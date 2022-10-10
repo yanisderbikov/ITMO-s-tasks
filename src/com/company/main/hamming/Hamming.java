@@ -44,7 +44,6 @@ public class Hamming {
     }
 
     public static int[] recoverCode(int[] code){
-        // TODO: 08.10.2022 неверно работает, нужно поглядеть в чем проблема
         int[] array = new int[16];
         array[0] = 10;// просто для удобства
 
