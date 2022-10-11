@@ -114,4 +114,34 @@ public class Parser {
 
         return builder.toString();
     }
+
+    public int[] parseAnyBits(){
+        // TODO: 11.10.2022 поверить если будет 0 на вход
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        int[] arr = new int[str.length()];
+        try {
+            for (int i = 0; i < arr.length; i++) {
+                arr[i] = Integer.parseInt(String.valueOf(str.charAt(i)));
+                if (arr[i] != 0 || arr[i] != 1){
+                    throw new RuntimeException();
+                }
+            }
+        } catch (Exception e){
+            parseAnyBits();
+        }
+
+        int[] hammingSignature = createHammingSignature(arr.length);
+
+
+
+        return null;
+    }
+
+    static int[] createHammingSignature(int length){
+        // 1 параметр - количество значимых битов
+        // 2 параметр - количество кодируемых битов
+        
+        return null;
+    }
 }
